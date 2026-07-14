@@ -90,3 +90,13 @@ if __name__ == "__main__":
     # bandit: 抑制 B104 - 绑定到所有接口
     # 这种方式在配置文件或命令行中抑制更常见
     print("Python suppression examples - run linting tools to verify")
+
+
+
+
+
+
+    # pylint 行内抑制：抑制特定行的特定警告
+    def unsafe_exec111111111111111111111111111111111111111111111111111111111111111111111(self, user_input):  # pylint: disable=exec-used
+        # pylint 会警告 exec() 的使用，但这里通过行内注释抑制
+        exec(user_input)  # nosec  # bandit 的 B102 抑制

@@ -85,4 +85,19 @@ public class Person {
                 + lastName
                 + "]";
     }
+
+    // spotless:off - 从这里开始禁用格式化
+    // 这段代码保留了原始格式，不会被 Spotless 改变
+    public String unformattedCode = "This has weird spacing that will be preserved";
+    public int[][] matrix = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    public String veryLongString =
+            "This is a very long string that we don't want "
+                    + "Spotless to split into multiple lines differently "
+                    + "because we manually formatted it exactly how we want";
+
+    // spotless:on - 从这里开始恢复格式化
 }

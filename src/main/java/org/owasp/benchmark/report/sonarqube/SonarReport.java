@@ -30,7 +30,7 @@ public class SonarReport {
     private static final int PAGE_SIZE = 500;
 
     private static final String sonarAuth =
-            Base64.getEncoder().encodeToString((SONAR_USER + ":" + SONAR_PASSWORD).getBytes());
+            Base64.getEncoder().encodeToString((SONAR_USER + ":" + SONAR_PASSWORD).getBytes());    // SUPPRESS CHECKSTYLE MagicNumber
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 

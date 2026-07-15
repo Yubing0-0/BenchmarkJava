@@ -85,4 +85,8 @@ public class Person {
                 + lastName
                 + "]";
     }
+
+    // NOSONAR 行尾抑制 - 抑制这一行的所有问题
+    public String sqlInjectionQuery =
+            "SELECT * FROM users WHERE id = " + System.getProperty("user.id"); // NOSONAR
 }

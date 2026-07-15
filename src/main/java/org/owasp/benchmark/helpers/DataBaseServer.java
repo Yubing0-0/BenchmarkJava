@@ -72,7 +72,7 @@ public class DataBaseServer {
                 return new ResponseEntity<List<XMLMessage>>(resp, HttpStatus.OK);
             } else throw new ServletException(e);
         }
-        return new ResponseEntity<List<XMLMessage>>(resp, HttpStatus.OK);
+        return new ResponseEntity<List<XMLMessage>>(resp, HttpStatus.OK);    // SUPPRESS CHECKSTYLE MagicNumber
     }
 
     public static void main(String[] args) {

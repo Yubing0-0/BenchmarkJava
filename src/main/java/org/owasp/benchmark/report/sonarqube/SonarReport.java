@@ -59,6 +59,7 @@ public class SonarReport {
         return "Benchmark_" + benchmarkVersion() + "-sonarqube-v" + apiCall("server/version");
     }
 
+    // NOPMD
     private static String benchmarkVersion() throws Exception {
         return DocumentBuilderFactory.newInstance()
                 .newDocumentBuilder()

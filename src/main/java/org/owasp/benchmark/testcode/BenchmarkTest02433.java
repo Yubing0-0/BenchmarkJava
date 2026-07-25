@@ -70,6 +70,7 @@ public class BenchmarkTest02433 extends HttpServlet {
         Runtime r = Runtime.getRuntime();
 
         try {
+            // codeql[java/command-line-injection]
             Process p = r.exec(args, argsEnv, new java.io.File(System.getProperty("user.dir")));
             org.owasp.benchmark.helpers.Utils.printOSCommandResults(p, response);
         } catch (IOException e) {

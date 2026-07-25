@@ -92,6 +92,7 @@ public class BenchmarkTest02610 extends HttpServlet {
         Runtime r = Runtime.getRuntime();
 
         try {
+            // lgtm[java/command-line-injection]
             Process p = r.exec(args, argsEnv);
             org.owasp.benchmark.helpers.Utils.printOSCommandResults(p, response);
         } catch (IOException e) {

@@ -92,6 +92,7 @@ public class BenchmarkTest02611 extends HttpServlet {
         Runtime r = Runtime.getRuntime();
 
         try {
+            // codeql[java/command-line-injection] SLF4J 测试测试
             Process p = r.exec(args, argsEnv, new java.io.File(System.getProperty("user.dir")));
             org.owasp.benchmark.helpers.Utils.printOSCommandResults(p, response);
         } catch (IOException e) {
